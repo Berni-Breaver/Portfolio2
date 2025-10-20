@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Berni Breaver M</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100%;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+
+        .profession {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 5px solid #3498db;
+        }
+
+        .section-heading {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-heading .icon {
+            font-size: 2.5rem;
+        }
+
+        .section-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .skills-list {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-3px);
+        }
+
+        .projects-section {
+            background: #fff;
+            border-left: 5px solid #e74c3c;
+        }
+
+        .project {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 10px;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .project-title {
+            font-size: 1.6rem;
+            color: #e74c3c;
+            margin-bottom: 15px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-description {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #666;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            text-align: center;
+            border-left: none;
+        }
+
+        .contact-section .section-heading {
+            color: white;
+            justify-content: center;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            background: rgba(255,255,255,0.1);
+            padding: 15px 25px;
+            border-radius: 25px;
+            transition: background 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .main-title {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.4rem;
+            }
+
+            .section-heading {
+                font-size: 1.8rem;
+            }
+
+            .skills-list {
+                justify-content: center;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <div class="container"><!-- Header Section -->
+   <header class="header">
+    <h1 class="main-title" id="main-title">📁 Portfolio</h1>
+    <h2 class="subtitle" id="name">Berni Breaver M</h2>
+    <p class="profession" id="profession">Mechanical Design Engineer/AutoCAD/Creo/Solidworks</p>
+   </header><!-- About Me Section -->
+   <section class="section">
+    <h2 class="section-heading"><span class="icon">👨‍💼</span> About Me</h2>
+  <img src="img/BERNI.png" alt="My Photo" class="BERNI-img">
+             <style> .BERNI-img { diplay: block;
+                      margin: 20px auto;
+                      max-width:70%;
+                      height: auto;} </style>
+
+    <p class="section-text" id="about-text">Hello! I'm Berni Breaver M, a passionate Mechanical Engineering diploma holder specialized in CAD design and 3D modeling. I enjoy transforming concepts into precise technical drawings and 3D models using tools like AutoCAD, Creo, and SolidWorks.</p>
+   </section><!-- Skills Section -->
+   <section class="section">
+    <h2 class="section-heading"><span class="icon">🛠</span> Skills</h2>
+    <p class="section-text">I possess strong technical proficiency in CAD software, enabling me to transform complex ideas into practical 2D and 3D models. My key skills include:</p>
+    <div class="skills-list"><span class="skill-tag">AutoCAD</span> <span class="skill-tag">Creo</span> <span class="skill-tag">SolidWorks</span>
+    </div>
+   </section><!-- 3D Modeling Samples Section -->
+   <section class="section projects-section">
+    <h2 class="section-heading"><span class="icon">🎯</span> 3D Modeling Samples</h2>
+    <div class="project">
+             <h3 class="project-title">🗄 Cabinet</h3>
+             <img src="img/Cabinet.png" alt="3D Cabinet Model" class="cabinet-img">
+             <style> .cabinet-img{ diplay: block;
+                      margin: 20px auto;
+                      max-width:70%;
+                      height: auto;} </style>
+             <p class="project-description">This cabinet model was developed using Creo Parametric software. This model demonstrates proficiency in geometric dimensioning, part modeling, and assembly techniques, with attention to real-world manufacturability and material selection. Ideal for use in office or industrial environments, the cabinet offers durable construction and easy access for organizing tools or documents.</p>
+    </div>
+    <div class="project">
+             <h3 class="project-title">🏗 Heavy Duty Rack</h3>
+             <img src="img/Heavyduty rack.png" alt="3D Heavyduty rack" class="Heavyduty-img">
+             <style>.Heavyduty-img {
+                     display: block; 
+                     margin: 20px auto;
+                     max-width: 70%;
+                     width: 100%;
+                     height: auto;}
+             </style>
+             
+             <p class="project-description">The 3D model of a heavy-duty rack is a robust and efficient storage solution designed for industrial and warehouse applications. Created using Creo Software, this model features high-strength steel frames, adjustable shelving levels, and reinforced beams to support substantial loads. The model showcases detailed joints, bolted connections, and accurate dimensions, making it ready for fabrication or presentation. This heavy-duty rack is engineered for durability, ease of assembly, and long-term performance in demanding environments.</p>
+    </div>
+    <div class="project">
+             <h3 class="project-title">🛒 Double And Single Side Supermarket Rack</h3>
+              <img src="img/Supermarket Rack.png"  alt="Supermarket Rack" Class="Supermarketrack-img"  >
+              <style> .Supermarketrack-img
+                     {display: block;
+                     margin: 20px auto;
+                     width: 70%;
+                     height: auto;
+                     }</style>
+
+                     <img src="img/Supermarket Rack 2.png"  alt="Supermarket Rack" Class="Supermarketrack2-img"  >
+                     <style> .Supermarketrack2-img
+                    {display: block;
+                     margin: 20px auto;
+                     width: 70%;
+                     height: auto;
+                     } </style>
+
+             <p class="project-description">This supermarket rack prototype was designed using Creo to ensure a functional, modular, and space-efficient display unit. The 3D model includes multiple adjustable shelves, side supports, and base stability features tailored for easy assembly and product organization. The design focuses on maximizing visibility and accessibility.</p>
+    </div>
+    <div class="project">
+             <h3 class="project-title">🏥 Portable X-Ray Machine</h3>
+             <img src="img/Portable x-ray Machine.png" alt="3D Portable x-ray Machine" class="Portablex-raymachine-img">
+               <style>.Portablex-raymachine-img { display: block;margin: 20px auto;max-width: 70%;width: 100%;height: auto; }
+               </style>
+             <p class="project-description">Presenting 3D solid model to my friend's engineering project showcase. portable X-ray machine—designed as part of my engineering project! While this is a non-working prototype, the model demonstrates the mechanical structure, component layout, and functional design of a compact, mobile X-ray system. Though it's not operational yet, this CAD model (built in SolidWorks) lays the foundation for future development.</p>
+    </div>
+    <div class="project">
+             <h3 class="project-title">🔄 Belt Conveyor</h3>
+             <img src="img/Belt Conveyor.png"  alt="Beltconveyor" Class="Beltconveyor-img"  > 
+             <style> .Beltconveyor-img {display: block;margin: 20px auto;max-width:70%;width: 100%;height: auto;}
+              </style>
+             <p class="project-description">The 3D model of a belt conveyor showcases a simple yet efficient material handling system widely used in industries for transporting bulk or packaged goods. Designed with precision using CAD tools, the conveyor features a durable frame, rotating pulleys, and a continuous belt optimized for smooth operation.</p>
+    </div>
+    <div class="project">
+             <h3 class="project-title">🛏 Bed</h3>
+            <img src="img/BED.png"  alt="BED" Class="Bed-img"  >
+             <style> .Bed-img
+             {display: block;margin: 20px auto;width: 70%;height: auto;}
+             </style>
+             
+             <p class="project-description">This 3D model of a steel bed showcases a sleek and modern design, combining durability with aesthetic appeal. Created using advanced CAD tools, the model highlights precise detailing in the frame, joints, and support structure, making it suitable for both residential and industrial interiors.</p>
+    </div>
+   </section><!-- Contact Section -->
+   <section class="section contact-section">
+    <h2 class="section-heading"><span class="icon">📞</span> Contact Us</h2>
+    <div class="contact-info">
+     <div class="contact-item"><span class="contact-icon">📞</span> <span id="phone-number">9791530614</span>
+     </div>
+     <div class="contact-item"><span class="contact-icon">🌍</span> <span>Email: <span id="email-address">mbernibraver@gmail.com</span></span>
+     </div>
+    </div>
+   </section>
+  </div>
+  <script>
+        // Configuration object for editable content
+        const defaultConfig = {
+            main_title: "📁 Portfolio",
+            name: "Berni Breaver M",
+            profession: "Mechanical Design Engineer/AutoCAD/Creo/Solidworks",
+            about_text: "Hello! I'm Berni Breaver M, a passionate Mechanical Engineering diploma holder specialized in CAD design and 3D modeling. I enjoy transforming concepts into precise technical drawings and 3D models using tools like AutoCAD, Creo, and SolidWorks.",
+            phone_number: " +91 9791530614",
+            email_address: "mbernibraver@gmail.com"
+        };
+
+        // Render function to update the UI based on config
+        async function render(config) {
+            document.getElementById('main-title').textContent = config.main_title || defaultConfig.main_title;
+            document.getElementById('name').textContent = config.name || defaultConfig.name;
+            document.getElementById('profession').textContent = config.profession || defaultConfig.profession;
+            document.getElementById('about-text').textContent = config.about_text || defaultConfig.about_text;
+            document.getElementById('phone-number').textContent = config.phone_number || defaultConfig.phone_number;
+            document.getElementById('email-address').textContent = config.email_address || defaultConfig.email_address;
+        }
+
+        // Map to capabilities (no recolorables, font editing, etc. for this portfolio)
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        // Map to edit panel values
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["main_title", config.main_title || defaultConfig.main_title],
+                ["name", config.name || defaultConfig.name],
+                ["profession", config.profession || defaultConfig.profession],
+                ["about_text", config.about_text || defaultConfig.about_text],
+                ["phone_number", config.phone_number || defaultConfig.phone_number],
+                ["email_address", config.email_address || defaultConfig.email_address]
+            ]);
+        }
+
+        // Initialize the Element SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                render,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+
+        // Initial render with default config
+        render(defaultConfig);
+
+        // Smooth scrolling for any internal navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add smooth scroll behavior
+            document.documentElement.style.scrollBehavior = 'smooth';
+            
+            // Add some interactive effects
+            const skillTags = document.querySelectorAll('.skill-tag');
+            skillTags.forEach(tag => {
+                tag.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px) scale(1.05)';
+                });
+                
+                tag.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Add hover effects to project cards
+            const projects = document.querySelectorAll('.project');
+            projects.forEach(project => {
+                project.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(10px)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                
+                project.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'990ee184f2e18fcd',t:'MTc2MDg2MjI4NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
